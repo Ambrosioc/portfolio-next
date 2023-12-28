@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 
 // components
-import Logo from "@/components/Logo";
+import Logo from "@/components/layout/header/nav/Logo";
 import { ThemeToggler } from "@/components/theme";
-import Nav from "@/components/Nav";
-import MobileNav from "@/components/MobileNav";
+import Nav from "@/components/layout/header/nav/Nav";
+import MobileNav from "@/components/layout/header/nav/MobileNav";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
