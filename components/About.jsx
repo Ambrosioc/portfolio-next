@@ -10,6 +10,7 @@ import {
 	Calendar,
 	Briefcase,
 } from "lucide-react";
+import { get } from "react-hook-form";
 
 const infosData = [
 	{
@@ -40,22 +41,28 @@ const infosData = [
 
 const qualificationsData = [
 	{
-		title: "Etudes",
+		title: "etudes",
 		data: [
 			{
-				school: "Wild Code School",
-				qualification: "Concepteur Développeur d'Applications",
-				date: "2020 - 2021",
+				school: "Sieli",
+				qualification: "Concepteur Développeur d'Applications (RNCP Niveau 6)",
+				date: "Novembre 2021 - Novembre 2022 (1 an)",
 			},
 			{
-				school: "Wild Code School",
-				qualification: "Concepteur Développeur d'Applications",
-				date: "2020 - 2021",
+				school: "Alt-Rh Consulting",
+				qualification: "Developpeur Web et Web Mobile (niveau Bac+2 )",
+				date: "Avril 2021 - Juillet 2021 (3 mois)",
 			},
 			{
-				school: "Wild Code School",
-				qualification: "Concepteur Développeur d'Applications",
-				date: "2020 - 2021",
+				school: "OpenClassrooms (autodidacte)",
+				qualification: "Développeur Web",
+				date: "2020 - 2021 (1 an)",
+			},
+			{
+				school: "Lycée Gustave Eiffel",
+				qualification:
+					"Baccalauréat Professionnel Électrotechnique, Énergie, Équipements Communicants ",
+				date: "2010 - 2013 (3 ans)",
 			},
 		],
 	},
@@ -197,8 +204,10 @@ const About = () => {
 										<h3 className="h3 mb-8 text-center xl:text-left">
 											Qualifications
 										</h3>
-										<div>
-											<div>
+										{/* experiance and education wrapper */}
+										<div className="grid md:grid-cols-2 gap-y-8">
+											{/* experiance */}
+											<div className="flex flex-col gap-y-6">
 												<div className="flex gap-x-4 items-center text-[22px] text-primary">
 													<Briefcase />
 													<h4 className="capitalize font-medium">
@@ -210,9 +219,7 @@ const About = () => {
 														(item, index) => {
 															const { company, qualification, date } = item;
 															return (
-																<div
-																	key={index}
-																	className="flex gap-x-8 group bg-yellow-50">
+																<div key={index} className="flex gap-x-8 group">
 																	<div className="h-[84px] w-[1px] bg-border relative ml-2">
 																		<div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all durantion-500"></div>
 																	</div>
@@ -233,12 +240,91 @@ const About = () => {
 													)}
 												</div>
 											</div>
-											<div>Education</div>
+											{/* education */}
+											<div className="flex flex-col gap-y-6">
+												<div className="flex gap-x-4 items-center text-[22px] text-primary">
+													<GraduationCap size={28} />
+													<h4 className="capitalize font-medium">
+														{getData(qualificationsData, "etudes").title}
+													</h4>
+												</div>
+												<div className="flex flex-col gap-y-8 ">
+													{getData(qualificationsData, "etudes").data.map(
+														(item, index) => {
+															const { school, qualification, date } = item;
+															return (
+																<div key={index} className="flex gap-x-8 group">
+																	<div className="h-[84px] w-[1px] bg-border relative ml-2">
+																		<div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all durantion-500"></div>
+																	</div>
+																	<div>
+																		<h5 className="font-semibold text-xl leading-none mb-2">
+																			{school}
+																		</h5>
+																		<p className="text-lg leading-none text-muted-foreground mb-4">
+																			{qualification}
+																		</p>
+																		<p className="text-base font-medium">
+																			{date}
+																		</p>
+																	</div>
+																</div>
+															);
+														}
+													)}
+												</div>
+											</div>
 										</div>
 									</div>
 								</TabsContent>
 								<TabsContent value="skills">
-									<div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+									<div className=" text-center xl:text-left">
+										<h3 className="h3 mb-8">Outils que j'utilise</h3>
+										<div className="mb-16">
+											<h4 className="text-xl font-semibold mb2">Skills</h4>
+											<div className="border-b border-border mb-4"></div>
+											<div>
+												{getData(skillsData, "skills").data.map(
+													(item, index) => {
+														const { name } = item;
+														return (
+															<div
+																key={index}
+																className="w-2/4 text-center xl:text-left mx-auto xl:mx-0">
+																<p className="font-medium">{name}</p>
+															</div>
+														);
+													}
+												)}
+											</div>
+										</div>
+										<div>
+											<h4 className="text-xl font-semibold mb-2 xl:text-left">
+												Outils
+											</h4>
+											<div className="border-b border-border mb-4"></div>
+											<div className="grid grid-cols-2 gap-4"></div>
+											<div className="flex gap-x-8 justify-center xl:justify-start">
+												{getData(skillsData, "tools").data.map(
+													(item, index) => {
+														const { imgPath } = item;
+														return (
+															<div key={index}>
+																<Image
+																	src={imgPath}
+																	alt="skill"
+																	width={32}
+																	height={32}
+																	priority
+																/>
+															</div>
+														);
+													}
+												)}
+											</div>
+										</div>
+									</div>
+									{/* <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
 										{skillsData.map((skill, index) => (
 											<div key={index}>
 												<h3 className="text-xl font-bold mb-4">
@@ -262,7 +348,7 @@ const About = () => {
 												))}
 											</div>
 										))}
-									</div>
+									</div> */}
 								</TabsContent>
 							</div>
 						</Tabs>
