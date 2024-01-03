@@ -1,5 +1,86 @@
+"use client";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import ProjectCard from "./ProjectCard";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+const projectData = [
+	{
+		image: "/work/1.png",
+		category: "NextJs",
+		name: "Nexa Website",
+		description: "Lorem ipsum dolor sit amet, elit arcu.",
+		link: "/",
+		github: "/",
+	},
+	{
+		image: "/work/2.png",
+		category: "ReactJs",
+		name: "Nexa Website",
+		description: "Lorem ipsum dolor sit amet, elit arcu.",
+		link: "/",
+		github: "/",
+	},
+	{
+		image: "/work/3.png",
+		category: "FullStack",
+		name: "Nexa Website",
+		description: "Lorem ipsum dolor sit amet, elit arcu.",
+		link: "/",
+		github: "/",
+	},
+	{
+		image: "/work/4.png",
+		category: "Symfony",
+		name: "Nexa Website",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, elit arcu.",
+		link: "/",
+		github: "/",
+	},
+];
+
 const Work = () => {
-	return <div>Work</div>;
+	return (
+		<section className="relative mb-12 xl:mb-48">
+			<div className="container mx-auto">
+				{/* text */}
+				<div className="max-w-[400px] mx-auto xl:mx-0 text center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
+					<h2 className="section-title mb-4">Lastes projets</h2>
+					<p className="subtitle mb-8">Voici mes derniers projets réalisés</p>
+					<Link href={"/projects"}>
+						<Button>tous les projets</Button>
+					</Link>
+				</div>
+				{/* slider */}
+				<div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
+					<Swiper
+						className="h-[480px]"
+						slidesPerView={1}
+						breakpoints={{
+							640: {
+								slidesPerView: 2,
+							},
+						}}
+						modules={[Pagination]}
+						spaceBetween={30}
+						pagination={{
+							clickable: true,
+						}}>
+						{/* show only the first 4 projects for the slider*/}
+						{projectData.slice(0, 4).map((project, index) => (
+							<SwiperSlide key={index}>
+								<ProjectCard project={project} />
+							</SwiperSlide>
+						))}
+					</Swiper>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default Work;
