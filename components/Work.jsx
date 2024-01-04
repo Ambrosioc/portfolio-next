@@ -17,7 +17,7 @@ const Work = () => {
 					<h2 className="section-title mb-4">Lastes projets</h2>
 					<p className="subtitle mb-8">Voici mes derniers projets réalisés</p>
 					<Link href={"/projects"}>
-						<Button>tous les projets</Button>
+						<Button>Tous les projets</Button>
 					</Link>
 				</div>
 				{/* slider */}

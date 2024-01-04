@@ -32,11 +32,12 @@ const Hero = () => {
 							des solutions Next.js et BasitMark sur des projets Symfony. Ma
 							pratique du freelance m'a permis de développer des applications
 							web performantes tout en répondant aux besoins spécifiques de mes
-							clients. Mon engagement envers la qualité du code et l'expérience
-							utilisateur guide chacun de mes projets. Prêt pour de nouveaux
-							défis passionnants, je suis ouvert aux opportunités de
-							collaboration. Rencontrons-nous pour discuter de projets innovants
-							! 🚀
+							clients.
+						</p>
+						<p className="subtitle max-w-[490px] mx-auto xl:mx-0">
+							Prêt pour de nouveaux défis passionnants, je suis ouvert aux
+							opportunités de collaboration. Rencontrons-nous pour discuter de
+							projets innovants ! 🚀
 						</p>
 						{/* buttons */}
 						<div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -65,21 +66,21 @@ const Hero = () => {
 					<div className="hidden xl:flex relative">
 						{/* bade 1 */}
 						<Badge
-							containerStyles="absolute top-[24%] -left-[5rem]"
+							containerStyles="absolute top-[5%] -left-[5rem]"
 							icon={<RiBriefcase4Fill />}
 							endCountNum={2}
 							badgeText="Années d'experiances"
 						/>
 						{/* bade 2 */}
 						<Badge
-							containerStyles="absolute top-[80%] -left-[1rem]"
+							containerStyles="absolute top-[50%] -left-[1rem]"
 							icon={<RiTodoFill />}
 							endCountNum={3}
 							badgeText="Projets terminés"
 						/>
 						{/* bade 3 */}
 						<Badge
-							containerStyles="absolute top-[55%] -right-8"
+							containerStyles="absolute top-[35%] -right-8"
 							icon={<RiTeamFill />}
 							endCountNum={10}
 							endCountText={"k"}
