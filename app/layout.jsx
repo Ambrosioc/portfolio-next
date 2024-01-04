@@ -2,6 +2,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Footer, Header } from "@/components/layout";
 import { ThemeProvider } from "@/components/theme";
+import { Analytics } from "@vercel/analytics/react";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
 					{children}
 					<Footer />
 				</ThemeProvider>
+				<Analytics />
 			</body>
 		</html>
 	);
