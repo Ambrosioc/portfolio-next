@@ -6,42 +6,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./ProjectCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-const projectData = [
-	{
-		image: "/work/1.png",
-		category: "NextJs",
-		name: "Nexa Website",
-		description: "Lorem ipsum dolor sit amet, elit arcu.",
-		link: "/",
-		github: "/",
-	},
-	{
-		image: "/work/2.png",
-		category: "ReactJs",
-		name: "Nexa Website",
-		description: "Lorem ipsum dolor sit amet, elit arcu.",
-		link: "/",
-		github: "/",
-	},
-	{
-		image: "/work/3.png",
-		category: "FullStack",
-		name: "Nexa Website",
-		description: "Lorem ipsum dolor sit amet, elit arcu.",
-		link: "/",
-		github: "/",
-	},
-	{
-		image: "/work/4.png",
-		category: "Symfony",
-		name: "Nexa Website",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, elit arcu.",
-		link: "/",
-		github: "/",
-	},
-];
+import { projectData } from "@/constant";
 
 const Work = () => {
 	return (

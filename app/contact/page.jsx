@@ -9,14 +9,15 @@ const Contact = () => {
 				<div className="grid xl:grid-cols-2 pt-12 xl:h-[480px] mb-6 xl:mb-24">
 					{/* text */}
 					<div className="flex flex-col justify-center">
-						<div className="flex items-center gap-x-4 text-primary text-lg mb-4 ">
-							<span className="w-[30px] h-[2px] bg-primary"></span>
-							Say Hello !
-						</div>
 						<h1 className="h1 max-w-md mb-8">Travallions ensemble.</h1>
 						<p className="subtitle max-w-[400px]">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit.
-							Cupiditate reiciendis unde eos ratione magnam quo quisquam
+							👋 Prêt à démarrer un projet passionnant ou simplement discuter ?
+							N'hésitez pas à me contacter, je serais ravi d'échanger avec vous
+							!
+						</p>
+						<p className="text-primary">
+							🚀 "La collaboration est la clé du succès. Ensemble, créons
+							quelque chose d'extraordinaire !"
 						</p>
 					</div>
 					{/* illustration */}

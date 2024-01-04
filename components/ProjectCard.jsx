@@ -39,6 +39,15 @@ const ProjectCard = ({ project }) => {
 				</Badge>
 				<h4 className="h4 mb1">{project.name}</h4>
 				<p className="text-muted-foreground text-lg">{project.description}</p>
+				<p>
+					{project.stack.map((item, index) => (
+						<span
+							key={index}
+							className="text-sm text-primary inline-block mr-2">
+							{item}
+						</span>
+					))}
+				</p>
 			</div>
 		</Card>
 	);
