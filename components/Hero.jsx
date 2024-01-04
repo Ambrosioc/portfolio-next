@@ -12,6 +12,8 @@ import DevImg from "./DevImg";
 import Badge from "./Badge";
 import Socials from "./Socials";
 
+const cvFile = "/hero/cv.pdf";
+
 const Hero = () => {
 	return (
 		<section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
@@ -22,13 +24,19 @@ const Hero = () => {
 						<div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
 							Developer Fullstack
 						</div>
-						<h1 className="h1">Hello, my name is Ambro Cazimira</h1>
+						<h1 className="h1">Salut ! Moi c'est Ambro</h1>
 						<p className="subtitle max-w-[490px] mx-auto xl:mx-0">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-							iure fugit reiciendis! Nisi ab est blanditiis impedit velit
-							repellat ex similique? Odit praesentium nemo libero, nihil
-							incidunt esse doloribus voluptatibus hic odio earum, dicta eveniet
-							consequuntur molestiae blanditiis porro itaque quas impedit vitae
+							👋 Salut ! Je suis un développeur Full Stack passionné, spécialisé
+							dans React, Next.js, Node.js et Symfony. Avec une expérience
+							significative en freelance, j'ai collaboré avec MKB-Automobile sur
+							des solutions Next.js et BasitMark sur des projets Symfony. Ma
+							pratique du freelance m'a permis de développer des applications
+							web performantes tout en répondant aux besoins spécifiques de mes
+							clients. Mon engagement envers la qualité du code et l'expérience
+							utilisateur guide chacun de mes projets. Prêt pour de nouveaux
+							défis passionnants, je suis ouvert aux opportunités de
+							collaboration. Rencontrons-nous pour discuter de projets innovants
+							! 🚀
 						</p>
 						{/* buttons */}
 						<div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -37,10 +45,15 @@ const Hero = () => {
 									Contacter moi <Send size={18} />
 								</Button>
 							</Link>
-							<Button variant="secondary" className="gap-x-2">
-								Télécharger CV
-								<Download size={18} />
-							</Button>
+							<Link
+								href={cvFile}
+								download={"Ambro-Developer-FullStack.pdf"}
+								target="_blank"
+								rel="noopener noreferrer">
+								<Button variant="secondary" className="gap-x-2">
+									Télécharger CV <Download size={18} />
+								</Button>
+							</Link>
 						</div>
 						{/* socials */}
 						<Socials
