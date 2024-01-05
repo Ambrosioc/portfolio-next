@@ -79,13 +79,13 @@ const Hero = () => {
 							badgeText="Projets terminés"
 						/>
 						{/* bade 3 */}
-						<Badge
+						{/* <Badge
 							containerStyles="absolute top-[35%] -right-8"
 							icon={<RiTeamFill />}
 							endCountNum={10}
 							endCountText={"k"}
 							badgeText="Clients satisfaits"
-						/>
+						/> */}
 						<div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
 						<DevImg
 							containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"

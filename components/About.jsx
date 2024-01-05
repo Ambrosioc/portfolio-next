@@ -175,12 +175,11 @@ const About = () => {
 									<div className="text-center xl:text-left">
 										<h3 className="h3 mb-4">Developer FullStack</h3>
 										<p className="subtitle max-w-xl max-auto xl:mx-0">
-											Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-											Pariatur deleniti ipsam non accusantium ut, molestias
-											dignissimos eos veritatis ea quidem. Lorem ipsum dolor sit
-											amet consectetur adipisicing elit. Quisquam, voluptatum.
-											Lorem ipsum dolor sit amet consectetur adipisicing elit.
-											Quisquam, voluptatum.
+											Mon expérience dans le développement web inclut des
+											missions chez BasitMark Paris, MKB - Automobile et Planity
+											Paris 2. J'ai également obtenu un diplôme de Concepteur
+											développeur d'applications à Sieli et un diplôme de
+											Développeur Web Bac+2 à Alt-Rh Consulting.
 										</p>
 										<div className="grid xl:grid-cols-2 gap-4 mb-12">
 											{infosData.map((info, index) => (
