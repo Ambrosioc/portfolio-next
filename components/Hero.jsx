@@ -11,8 +11,7 @@ import {
 import DevImg from "./DevImg";
 import Badge from "./Badge";
 import Socials from "./Socials";
-
-const cvFile = "/hero/cv.pdf";
+import { cvFile } from "@/constant";
 
 const Hero = () => {
 	return (
