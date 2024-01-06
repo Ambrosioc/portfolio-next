@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Card, CardHeader } from "./ui/card";
-import { Badge } from "./ui/badge";
+import { Card, CardHeader } from "../ui/card";
+import { Badge } from "../ui/badge";
 import { Github, Link2Icon } from "lucide-react";
 
 const ProjectCard = ({ project }) => {

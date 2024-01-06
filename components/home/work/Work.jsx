@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../../ui/button";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import ProjectCard from "./ProjectCard";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import { projectData } from "@/constant";
+import { projectData } from "@/utils/constant";
+import ProjectCard from "@/components/projectCard/ProjectCard";
 
 const Work = () => {
 	return (

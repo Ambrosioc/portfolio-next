@@ -1,14 +1,11 @@
-import DevImg from "./DevImg";
+import DevImg from "../../devImg/DevImg";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GraduationCap, Briefcase } from "lucide-react";
-import { infosData, qualificationsData, skillsData } from "@/constant";
+import { infosData, qualificationsData, skillsData } from "@/utils/constant";
+import { getData } from "@/utils/dataUtils";
 
 const About = () => {
-	const getData = (arr, title) => {
-		return arr.find((item) => item.title === title);
-	};
-
 	return (
 		<section className="xl:h-[860px] pb-12 xl:py-24">
 			<div className="container mx-auto">

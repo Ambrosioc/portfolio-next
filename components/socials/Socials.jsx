@@ -1,18 +1,7 @@
 "use client";
 
-import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
+import { icons } from "@/utils/constant";
 import Link from "next/link";
-
-const icons = [
-	{
-		path: "https://www.linkedin.com/in/ambro-cazimira/",
-		name: <RiLinkedinFill />,
-	},
-	{
-		path: "/",
-		name: <RiGithubFill />,
-	},
-];
 
 const Socials = ({ containerStyles, iconsStyles }) => {
 	return (

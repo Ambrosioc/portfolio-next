@@ -1,17 +1,12 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../../ui/button";
 import { Download, Send } from "lucide-react";
-import {
-	RiBriefcase4Fill,
-	RiTeamFill,
-	RiTodoFill,
-	RiArrowDownSLine,
-} from "react-icons/ri";
+import { RiBriefcase4Fill, RiTodoFill, RiArrowDownSLine } from "react-icons/ri";
 
-import DevImg from "./DevImg";
-import Badge from "./Badge";
-import Socials from "./Socials";
-import { cvFile } from "@/constant";
+import DevImg from "../../devImg/DevImg";
+import Badge from "../../badge/Badge";
+import Socials from "../../socials/Socials";
+import { cvFile } from "@/utils/constant";
 
 const Hero = () => {
 	return (

@@ -5,12 +5,7 @@ import { usePathname } from "next/navigation";
 
 // framer motion
 import { motion } from "framer-motion";
-
-const links = [
-	{ path: "/", name: "Accueil" },
-	{ path: "/projects", name: "Mes Projets" },
-	{ path: "/contact", name: "Contact" },
-];
+import { links } from "@/utils/constant";
 
 const Nav = ({ constainerStyles, linkStyles, underlineStyles }) => {
 	const path = usePathname();

@@ -1,3 +1,4 @@
+import { RiLinkedinFill, RiGithubFill } from "react-icons/ri";
 import {
 	User2,
 	MailIcon,
@@ -6,6 +7,9 @@ import {
 	Calendar,
 	GraduationCap,
 	Briefcase,
+	GanttChartSquare,
+	Blocks,
+	Gem,
 } from "lucide-react";
 
 // hero section cv file
@@ -135,6 +139,28 @@ export const skillsData = [
 ];
 
 // services section data
+export const servicesData = [
+	{
+		icon: <GanttChartSquare size={72} strokeWidth={0.8} />,
+		title: "Web Development",
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quos.",
+	},
+	{
+		icon: <Blocks size={72} strokeWidth={0.8} />,
+		title: "Web Design",
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quos.",
+	},
+	{
+		icon: <Gem size={72} strokeWidth={0.8} />,
+		title: "App Development",
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quos.",
+	},
+];
+
+// projet section data
 export const projectData = [
 	{
 		image: "/work/1.png",
@@ -210,4 +236,75 @@ export const projectData = [
 		github: "/",
 		stack: ["React", "Next.js", "Tailwind CSS"],
 	},
+];
+
+// testimonials section data
+export const reviews = [
+	{
+		id: 1,
+		name: "John Doe",
+		job: "Web Developer",
+		avatar: "/reviews/avatar-1.png",
+		review:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+	},
+	{
+		id: 2,
+		name: "Jane Doe",
+		job: "Web Designer",
+		avatar: "/reviews/avatar-2.png",
+		review:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+	},
+	{
+		id: 3,
+		name: "John Doe",
+		job: "Web Developer",
+		avatar: "/reviews/avatar-3.png",
+		review:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+	},
+	{
+		id: 4,
+		name: "Jane Doe",
+		job: "Web Designer",
+		avatar: "/reviews/avatar-4.png",
+		review:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+	},
+	{
+		id: 5,
+		name: "John Doe",
+		job: "Web Developer",
+		avatar: "/reviews/avatar-5.png",
+		review:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+	},
+	{
+		id: 6,
+		name: "Jane Doe",
+		job: "Web Designer",
+		avatar: "/reviews/avatar-6.png",
+		review:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+	},
+];
+
+// socials section
+export const icons = [
+	{
+		path: "https://www.linkedin.com/in/ambro-cazimira/",
+		name: <RiLinkedinFill />,
+	},
+	{
+		path: "/",
+		name: <RiGithubFill />,
+	},
+];
+
+// nav links
+export const links = [
+	{ path: "/", name: "Accueil" },
+	{ path: "/projects", name: "Mes Projets" },
+	{ path: "/contact", name: "Contact" },
 ];

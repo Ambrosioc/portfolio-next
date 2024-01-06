@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/ProjectCard";
-import { projectData } from "@/constant";
+import ProjectCard from "@/components/projectCard/ProjectCard";
+import { projectData } from "@/utils/constant";
 
 const uniqueCategories = [
 	"Tous les projets",

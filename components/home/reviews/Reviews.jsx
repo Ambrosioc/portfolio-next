@@ -1,61 +1,12 @@
 "use client";
 import Image from "next/image";
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "../../ui/card";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { reviews } from "@/utils/constant";
 
-const reviews = [
-	{
-		id: 1,
-		name: "John Doe",
-		job: "Web Developer",
-		avatar: "/reviews/avatar-1.png",
-		review:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-	},
-	{
-		id: 2,
-		name: "Jane Doe",
-		job: "Web Designer",
-		avatar: "/reviews/avatar-2.png",
-		review:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-	},
-	{
-		id: 3,
-		name: "John Doe",
-		job: "Web Developer",
-		avatar: "/reviews/avatar-3.png",
-		review:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-	},
-	{
-		id: 4,
-		name: "Jane Doe",
-		job: "Web Designer",
-		avatar: "/reviews/avatar-4.png",
-		review:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-	},
-	{
-		id: 5,
-		name: "John Doe",
-		job: "Web Developer",
-		avatar: "/reviews/avatar-5.png",
-		review:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-	},
-	{
-		id: 6,
-		name: "Jane Doe",
-		job: "Web Designer",
-		avatar: "/reviews/avatar-6.png",
-		review:
-			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
-	},
-];
 const Reviews = () => {
 	return (
 		<section className="mb-12 xl:mb-32">
